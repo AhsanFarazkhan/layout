@@ -1,58 +1,47 @@
-let box_1=true;
-let box_2=true;
-let box_3=true;
-let box_4=true;
-let box2=document.querySelector('.box2');
-box2.addEventListener('mouseover',()=>{
-document.querySelector('.box1').classList.add('box1_after');
-box2.classList.add('box2_after');
-})
-box2.addEventListener('mouseout',()=>{
-document.querySelector('.box1').classList.remove('box1_after');
-box2.classList.remove('box2_after');
-})
+class boxInteraction {
+     box;
+    constructor(box)
+    {
+this.box=box;
 
-let box3=document.querySelector('.box3');
-box3.addEventListener('mouseover',()=>{
-document.querySelector('.box1').classList.add('box1_after');
-box3.classList.add('box3_after');
-})
-box3.addEventListener('mouseout',()=>{
-document.querySelector('.box1').classList.remove('box1_after');
-box3.classList.remove('box3_after');
-})
+    }
+ addEvents() {
+    
+    const box=document.querySelector(this.box.box_class);
+    box.addEventListener('mouseover',()=>{
+    document.querySelector('.box1').classList.add('box1_after');
+    box.classList.add(this.box.box_after);
+    })
+    box.addEventListener('mouseout',()=>{
+    document.querySelector('.box1').classList.remove('box1_after');
+    box.classList.remove(this.box.box_after);
+    })
 
+}
+}
 
-let box4=document.querySelector('.box4');
-box4.addEventListener('mouseover',()=>{
-document.querySelector('.box1').classList.add('box1_after');
-box4.classList.add('box4_after');
-})
-box4.addEventListener('mouseout',()=>{
-document.querySelector('.box1').classList.remove('box1_after');
-box4.classList.remove('box4_after');
-})
-
-
-
-
-
-
-
+const array_box=[
+    {
+        box_number:2,
+        box_class:'.box2',
+        box_after:'box2_after'
+    },
+    {
+        box_number:3,
+        box_class:'.box3',
+        box_after:'box3_after'
+    },
+    {
+        box_number:4,
+        box_class:'.box4',
+        box_after:'box4_after'
+    }
+]
 
 
-/*
-
-
-
-let box2=document.querySelector('.box2');
-box2.addEventListener('mouseover',()=>{
-document.querySelector('.box1').classList.add('box1_after');
-box2.classList.add('box2_after');
-})
-box2.addEventListener('mouseout',()=>{
-document.querySelector('.box1').classList.remove('box1_after');
-box2.classList.remove('box2_after');
+array_box.forEach((box,index)=>
+{
+    const boxOjb=new boxInteraction(box);
+    boxOjb.addEvents();
 })
 
-*/
