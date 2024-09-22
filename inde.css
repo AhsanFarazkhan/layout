@@ -1,0 +1,75 @@
+body{
+    height: 570px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    background-color: black;
+    height: 400px;
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.box1{
+    height: 340px;
+    width: 225px;
+    background-image: url('/layout/img/superwomen.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition:  width 0.55s;
+    margin-right: 5px;
+  
+}
+.box2{
+    background-image: url('/layout/img/wonderwomen.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 340px;
+    width: 45px;
+    transition:  width 0.55s;
+    margin-right: 5px;
+}
+.box3{
+    background-image: url('/layout/img/wandavision1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 340px;
+    width: 45px;
+    transition:  width 0.55s;
+    margin-right: 5px;
+}
+.box4{
+    background-image: url('/layout/img/superman.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 340px;
+    width: 45px;
+    transition:  width 0.55s;
+    margin-right: 5px;
+}
+.box1_after{
+
+    width: 45px;
+    transition:  width 0.55s ;
+}
+.box2_after{
+    width: 225px;
+    transition:  width 0.55s ;
+}
+.box3_after{
+    width: 225px;
+    transition:  width 0.55s ;
+}
+.box4_after{
+    width: 225px;
+    transition:  width 0.55s ;
+}
